@@ -20,7 +20,7 @@ jobs:
 
       - name: Find and unzip project archive
         run: |
-          ZIPFILE=$(find . -name '*.zip' -not -path './.git/*' | head -n 1)
+          ZIPFILE=$(find . -name '*FIXED*.zip' -not -path './.git/*' | head -n 1)
           if [ -z "$ZIPFILE" ]; then
             echo "::error::No zip archive found in repo"
             exit 1
